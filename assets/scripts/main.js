@@ -99,6 +99,9 @@ function initFormHandler() {
 		document.querySelector("main").appendChild(newRecipe);
 		
 		let recipes = JSON.parse(localStorage.getItem("recipes"));
+		if(recipes == null){
+			recipes = [];
+		}
 		recipes.push(recipeObject);
 		saveRecipesToStorage(recipes);
 	});
