@@ -83,6 +83,7 @@ function initFormHandler() {
 	// B9. TODO - Get the recipes array from localStorage, add this new recipe to it, and
 	//            then save the recipes array back to localStorage
 	form.addEventListener("submit", (event) => {
+		event.preventDefault(); // Prevent long URI issues.
 		let formData = new FormData(form);
 		let recipeObject = {};
 
